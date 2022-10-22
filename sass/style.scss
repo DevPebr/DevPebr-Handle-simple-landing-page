@@ -1,0 +1,259 @@
+// Colors
+@import './variables/colors.scss';
+
+// Variáveis
+@import './variables/family-fonts.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 1rem;
+
+    body {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        background-image: url(../images/bg-desktop.svg);
+        background-color: $violet;
+
+        .container {
+            padding: 50px;
+            width: 100%;
+            height: 100%;
+
+
+            header {
+                width: 100%;
+                padding-bottom: 50px;
+
+                picture {
+                    img {
+                        width: 250px;
+                        height: 60px;
+
+                    }
+                }
+            }
+
+            .main-section {
+
+                display: grid;
+                gap: 60px;
+                width: 100%;
+                grid-template-areas: 'img content';
+
+                picture {
+                    img {
+                        grid-area: img;
+
+                    }
+                }
+
+                article {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    grid-area: content;
+
+
+
+                    h1 {
+                        width: 90%;
+                        font-size: 2.5rem;
+                        color: #fff;
+                        font-family: $Headings;
+                        font-weight: 600;
+
+                    }
+
+                    p {
+                        color: #fff;
+                        font-family: $body;
+                        font-weight: 400;
+                        font-size: 1rem;
+                        line-height: 25px;
+                        padding-bottom: 25px;
+                        width: 85%;
+                    }
+
+                    button {
+                        width: 200px;
+                        height: 58px;
+                        border-radius: 30px;
+                        border: none;
+                        font-family: $body;
+                        color: $violet;
+                        box-shadow: 2px 2px 5px rgba(0, 0, 0, 50%);
+                        font-size: 1.2rem;
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: $soft-magenta;
+                            color: white;
+                        }
+                    }
+                }
+
+            }
+
+            // .main-section
+
+            footer {
+                display: flex;
+                gap: 15px;
+                justify-content: end;
+                width: 92%;
+
+                div {
+                    border: 1px solid #fff;
+                    border-radius: 50%;
+                    padding: 7px;
+                    display: flex;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+
+                    img {
+                        width: 20px;
+                    }
+                }
+            }
+        }
+
+        // .container
+
+    }
+
+    // body
+
+    @media (max-width: 1250px) {
+        body {
+            .container {
+                .main-section {
+                    justify-content: center;
+                    grid-template-areas: 'logo' 'img' 'content';
+
+
+                picture {
+                    margin: 0 auto;
+                    img {
+                        grid-area: img;
+                        width: 650px;
+                    }
+                }
+
+               article {
+                text-align: center;
+                
+               
+                h1 {
+                    margin: 0 auto;
+                    width: 456px;
+                    height: 140px;
+                    padding-bottom: 20px;
+                }
+
+                p {
+                    margin: 0 auto;
+                    width: 305px;
+                    height: 150px;
+
+                }
+
+                button {
+                    margin: 0 auto;
+                }
+
+               } // article
+
+              
+
+                } // .main-section
+                footer {
+                    justify-content: center;
+                    
+                    width: 100%;
+                    margin-top: 20px;
+                   }
+            } // .container
+        } // body
+
+
+    } // @media
+
+    @media (max-width: 650px) {
+        body {
+            background-image: url(../images/bg-mobile.svg);
+            background-repeat: no-repeat;
+            .container {
+
+                header {
+                    
+                    picture {
+                        width: 100%;
+                        img {
+                            width: 100%;
+
+                        }
+                    }
+                }
+                .main-section {
+
+                    picture {
+                        
+                        width: 100%;
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    article {
+                        h1 {
+                            font-size: 1.6rem;
+                            width: 306px;
+                            
+
+                        }
+
+                        p {
+                            margin-bottom: 40px;
+                        }
+
+                        button {
+                            height: 40px;
+                            width: 250px;
+                            font-size: 1rem;
+                            margin-bottom: 20px;
+                        }
+                    }
+
+
+                } // .main-section
+
+                footer {
+                    display: flex;
+                    align-items: center;
+                    height: 30vh;
+
+
+                    div {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 45px;
+                        height: 45px;
+
+                        img {
+                            height: 25px;
+                            width: 25px;
+                        }
+                    }
+                }
+
+            } // .container
+        } // body
+    } // @media
+} // *
+
