@@ -59,6 +59,7 @@
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: content;
+  margin-top: 50px;
 }
 
 * body .container .main-section article h1 {
@@ -80,7 +81,7 @@
 }
 
 * body .container .main-section article button {
-  width: 200px;
+  width: 230px;
   height: 58px;
   border-radius: 30px;
   border: none;
@@ -89,6 +90,8 @@
   -webkit-box-shadow: 2px 2px 5px black;
           box-shadow: 2px 2px 5px black;
   font-size: 1.2rem;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
 }
 
 * body .container .main-section article button:hover {
@@ -126,6 +129,9 @@
 }
 
 @media (max-width: 1250px) {
+  * body {
+    height: 130vh;
+  }
   * body .container .main-section {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -157,13 +163,28 @@
   }
   * body .container .main-section article button {
     margin: 0 auto;
+    margin-bottom: 150px;
   }
   * body .container footer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    height: 30vh;
     width: 100%;
-    margin-top: 20px;
+  }
+  * body .container footer div {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 50px;
+    height: 50px;
+  }
+  * body .container footer div img {
+    width: 25px;
+    height: 25px;
   }
 }
 
